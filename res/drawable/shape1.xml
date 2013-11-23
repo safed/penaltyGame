@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <shape xmlns:android="http://schemas.android.com/apk/res/android" android:shape="oval">
-        <solid android:color="#adff2f"> <!-- Colore di sfondo -->
-                <padding android:layout_width="101dp">
-                        <corners android:radius="7dp"> <!-- Quando deve essere arrotondato il bordo -->
-                         <stroke android:width="10dp" android:color="#FF000000"/> <!-- Spessre e colore del bordo -->
-                        </corners>
-                </padding>
-        </solid>
+	<solid android:color="#adff2f"> <!-- Colore di sfondo -->
+		<padding android:layout_width="101dp">
+			<corners android:radius="7dp"> <!-- Quando deve essere arrotondato il bordo -->
+				<stroke android:width="10dp" 
+				    	android:color="#FF000000"/> <!-- Spessre e colore del bordo -->
+			</corners>
+		</padding>
+	</solid>
 </shape>

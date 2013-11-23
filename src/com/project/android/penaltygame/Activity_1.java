@@ -24,18 +24,17 @@ public class Activity_1 extends Activity {
 		requestWindowFeature(Window.FEATURE_NO_TITLE);
 		getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
 		WindowManager.LayoutParams.FLAG_FULLSCREEN);
-		//setContentView(R.layout.activity_1);
+		setContentView(R.layout.activity_1);
 		
 		setContentView(R.layout.activity_1);
 		Button ShowActivity2Button = (Button) findViewById(R.id.btn_start);
         ShowActivity2Button.setOnClickListener(new View.OnClickListener() 
         	{
         		public void onClick(View view){
-        			startActivity3();
+        			startActivity2();
         		}
         	}
        );
-		
 	}
 
 	@Override
@@ -45,9 +44,8 @@ public class Activity_1 extends Activity {
 		return true;
 	}
 	
-	private void startActivity3(){
-    	Intent startTwo= new Intent(this, Activity3.class);
+	private void startActivity2(){
+    	Intent startTwo= new Intent(this, Activity2.class);
     	startActivity(startTwo);
     }
-
 }
