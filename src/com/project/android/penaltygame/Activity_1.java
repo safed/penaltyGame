@@ -31,7 +31,7 @@ public class Activity_1 extends Activity {
         ShowActivity2Button.setOnClickListener(new View.OnClickListener() 
         	{
         		public void onClick(View view){
-        			startActivity2();
+        			startActivity2(); 
         		}
         	}
        );

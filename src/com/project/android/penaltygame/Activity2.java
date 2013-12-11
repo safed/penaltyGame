@@ -1,6 +1,7 @@
 package com.project.android.penaltygame;
 
 import android.content.pm.ActivityInfo;
+import android.graphics.drawable.AnimationDrawable;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 import android.view.Menu;
@@ -20,15 +21,24 @@ public class Activity2 extends FragmentActivity {
 		getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
 		WindowManager.LayoutParams.FLAG_FULLSCREEN);
 		setContentView(R.layout.activity_2);
-		
+
+
 		Button btnLeft = (Button) findViewById(R.id.btnLeft);
 		Button btnRight = (Button) findViewById(R.id.btnRight);
-		
+		ImageView imgPlayer = (ImageView) findViewById(R.id.imgViewPlayer);
+		imgPlayer.setBackgroundResource(R.drawable.p1);
+				
 		btnLeft.setOnClickListener(new View.OnClickListener() {
 			
 			@Override
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
+				ImageView imgPlayer = (ImageView) findViewById(R.id.imgViewPlayer);
+				imgPlayer.setBackgroundResource(R.drawable.anim_player);
+				AnimationDrawable playerAnim = (AnimationDrawable) imgPlayer.getBackground();
+				
+				playerAnim.start();
+				imgPlayer.setBackgroundResource(R.drawable.p1);
 				
 			}
 		});
@@ -38,16 +48,16 @@ public class Activity2 extends FragmentActivity {
 			@Override
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
+				ImageView imgPlayer = (ImageView) findViewById(R.id.imgViewPlayer);
+				imgPlayer.setBackgroundResource(R.drawable.anim_player);
+				AnimationDrawable playerAnim = (AnimationDrawable) imgPlayer.getBackground();
+				
+				playerAnim.start();
 				
 			}
-		});
-		
+		});		
 	}
-	
-	private void shoot(String s) {
-		ImageView imgView = (ImageView) findViewById(R.id.imgViewBall);
-		
-	}
+
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
